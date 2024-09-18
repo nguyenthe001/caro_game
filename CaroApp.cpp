@@ -73,14 +73,14 @@ void CaroApp::start() {
 
         switch (selection) {
         case 1:
-            system("cls");
+            system("clear");
             controller->PvP(this->chessBoard, this->player1, this->player2, this->referee);
             this->reset();
             system("pause");
-            system("cls");
+            system("clear");
             break;
         case 2:
-            system("cls");
+            system("clear");
             int selection;
             do {
                 std::cout << YELLOW << "\n-------" << RESET << " PLAY WITH BOT " << YELLOW << "------- ";
@@ -122,31 +122,31 @@ void CaroApp::start() {
                     controller->PvB(this->chessBoard, this->player1, this->bot, this->referee);
                     break;
                 case 4:
-                    system("cls");
+                    system("clear");
                     break;
                 }
             } while (selection);
             this->reset();
             system("pause");
-            system("cls");
+            system("clear");
             break;
         case 3:
-            system("cls");
+            system("clear");
             controller->replay();
             system("pause");
-            system("cls");
+            system("clear");
             break;
         case 4:
-            system("cls");
+            system("clear");
             controller->showPlayerInfor();
             system("pause");
-            system("cls");
+            system("clear");
             break;
         case 5:
-            system("cls");
+            system("clear");
             controller->guild();
             system("pause");
-            system("cls");
+            system("clear");
             break;
         case 0:
             break;

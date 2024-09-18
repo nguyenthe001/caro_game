@@ -85,7 +85,7 @@ std::pair<int, int> BOT::getNextMove(ChessBoard* chessBoard)
 }
 
 std::pair<int, int> BOT::placeAPiece(ChessBoard* chessBoard, char chessPiece) {
-    std::cout << "BOT...";
+    std::cout << "BOT...\n";
     std::pair<int, int> move = getNextMove(chessBoard);
     chessBoard->setPiece(move.first, move.second, chessPiece);
     return move;

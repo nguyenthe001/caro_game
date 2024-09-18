@@ -31,7 +31,7 @@ void Controller::PvP(ChessBoard* chessBoard, Player* player1, Player* player2, R
 	this->writeReplay(displayName[1], ";");
 	player1->setName(displayName[0]);
 	player2->setName(displayName[1]);
-	system("cls");
+	system("clear");
 	chessBoard->drawBoard();
 	int count = 0;
 	while (true)
@@ -40,7 +40,7 @@ void Controller::PvP(ChessBoard* chessBoard, Player* player1, Player* player2, R
 		this->writeStep(std::to_string(move.first), ";");
 		this->writeStep(std::to_string(move.second), ";");
 		++count;
-		system("cls");
+		system("clear");
 		chessBoard->drawBoard();
 		if (referee->checkWin(chessBoard, move.first, move.second, 'X')) {
 			std::cout << player1->getName() << " won!\n";
@@ -58,7 +58,7 @@ void Controller::PvP(ChessBoard* chessBoard, Player* player1, Player* player2, R
 		this->writeStep(std::to_string(move.first), ";");
 		this->writeStep(std::to_string(move.second), ";");
 		++count;
-		system("cls");
+		system("clear");
 		chessBoard->drawBoard();
 		if (referee->checkWin(chessBoard, move.first, move.second, 'O')) {
 			std::cout << player2->getName() << " won!\n";
@@ -84,14 +84,14 @@ void Controller::PvB(ChessBoard* chessBoard, Player* player1, BOT* bot, Referee*
 	std::cin >> displayName;
 
 	player1->setName(displayName);
-	system("cls");
+	system("clear");
 	chessBoard->drawBoard();
 	int count = 0;
 	while (true)
 	{
 		std::pair<int, int> move = player1->placeAPiece(chessBoard, 'X');
 		++count;
-		system("cls");
+		system("clear");
 		chessBoard->drawBoard();
 		if (referee->checkWin(chessBoard, move.first, move.second, 'X')) {
 			std::cout << player1->getName() << " won!\n";
@@ -104,7 +104,7 @@ void Controller::PvB(ChessBoard* chessBoard, Player* player1, BOT* bot, Referee*
 		}
 		move = bot->placeAPiece(chessBoard, 'O');
 		++count;
-		system("cls");
+		system("clear");
 		chessBoard->drawBoard();
 		if (referee->checkWin(chessBoard, move.first, move.second, 'O')) {
 			std::cout << "Bot won!\n";
@@ -160,7 +160,7 @@ void Controller::replay()
 	int num_lines_to_read ; 
 	std::cout << "Nhap tran ma ban muon replay: ";
 	std::cin >> num_lines_to_read;
-	system("cls");
+	system("clear");
 	int line_count = 0;
 	ChessBoard chessBoard;
 	char currentPiece = 'X'; 
@@ -178,7 +178,7 @@ void Controller::replay()
 				chessBoard.setPiece(x, y, currentPiece);
 				chessBoard.drawBoard();
 				system("pause");
-				system("cls");
+				system("clear");
 				currentPiece = (currentPiece == 'X') ? 'O' : 'X';
 			}
 			break;
