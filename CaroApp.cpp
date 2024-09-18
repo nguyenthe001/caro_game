@@ -76,7 +76,7 @@ void CaroApp::start() {
             system("clear");
             controller->PvP(this->chessBoard, this->player1, this->player2, this->referee);
             this->reset();
-            system("pause");
+            std::cin.get(); 
             system("clear");
             break;
         case 2:
@@ -127,25 +127,25 @@ void CaroApp::start() {
                 }
             } while (selection != 4);
             this->reset();
-            system("pause");
+            std::cin.get(); 
             system("clear");
             break;
         case 3:
             system("clear");
             controller->replay();
-            system("pause");
+            std::cin.get(); 
             system("clear");
             break;
         case 4:
             system("clear");
             controller->showPlayerInfor();
-            system("pause");
+            std::cin.get(); 
             system("clear");
             break;
         case 5:
             system("clear");
             controller->guild();
-            system("pause");
+            std::cin.get(); 
             system("clear");
             break;
         }

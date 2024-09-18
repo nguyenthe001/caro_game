@@ -3,7 +3,7 @@ void Controller::writeReplay(std::string str ,std::string end)
 {
 	std::ofstream file("replays.txt", std::ios::app);
 	if (!file) {
-		std::cerr << "Không thể mở tệp để ghi\n";
+		std::cerr << "Can not open file!\n";
 	}
 	file<< str + end;
 	file.close();
@@ -13,7 +13,7 @@ void Controller::writeStep(std::string str, std::string end)
 {
 	std::ofstream file("replaysInfo.txt", std::ios::app);
 	if (!file) {
-		std::cerr << "Không thể mở tệp để ghi\n";
+		std::cerr << "Can not open file!\n";
 	}
 	file << str + end;
 	file.close();
@@ -158,8 +158,9 @@ void Controller::replay()
 	}
 	std::string data2;
 	int num_lines_to_read ; 
-	std::cout << "Nhap tran ma ban muon replay: ";
+	std::cout << "Enter the matches you want to replay: ";
 	std::cin >> num_lines_to_read;
+	std::cin.ignore();
 	system("clear");
 	int line_count = 0;
 	ChessBoard chessBoard;
@@ -177,7 +178,8 @@ void Controller::replay()
 				data2.erase(0, posOfDelimiter + delimiter.length());
 				chessBoard.setPiece(x, y, currentPiece);
 				chessBoard.drawBoard();
-				system("pause");
+				std::cout << "Press any key to continue...";
+				std::cin.get();
 				system("clear");
 				currentPiece = (currentPiece == 'X') ? 'O' : 'X';
 			}
@@ -185,10 +187,7 @@ void Controller::replay()
 		}
 		line_count++;
 	}
-
 	input2.close();
-
-
 }
 
 void Controller::showPlayerInfor() {
