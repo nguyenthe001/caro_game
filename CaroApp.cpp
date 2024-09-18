@@ -59,7 +59,7 @@ void CaroApp::start() {
                 if (!std::cin) {
                     throw std::invalid_argument("[!] Data type is incorrect");
                 }
-                if (selection > 5) {
+                if (selection > 5 && selection < 0) {
                     throw std::invalid_argument("[!] Enter 0 to 5");
                 }
                 break;
@@ -87,7 +87,7 @@ void CaroApp::start() {
                 std::cout << PURPLE << "\n[1] Easy " << RESET << "Mode";
                 std::cout << PURPLE << "\n[2] Noraml " << RESET << "Mode";
                 std::cout << PURPLE << "\n[3] Hard " << RESET << "Mode";
-                std::cout << PURPLE << "\n[4] Back" << RESET << "to MAIN MENU";
+                std::cout << PURPLE << "\n[4] Back " << RESET << "to MAIN MENU";
                 std::cout << RESET << "\nPress number to choice: ";
                 while (true) {
                     try {
@@ -96,8 +96,8 @@ void CaroApp::start() {
                         if (!std::cin) {
                             throw std::invalid_argument("[!] Data type is incorrect");
                         }
-                        if (selection > 5) {
-                            throw std::invalid_argument("[!] Enter 0 to 5");
+                        if (selection > 4 && selection < 1) {
+                            throw std::invalid_argument("[!] Enter 1 to 4");
                         }
                         break;
                     }
@@ -112,20 +112,20 @@ void CaroApp::start() {
                 case 1:
                     bot->setDepth(0);
                     controller->PvB(this->chessBoard, this->player1, this->bot, this->referee);
+                    this->reset();
                     break;
                 case 2:
                     bot->setDepth(1);
                     controller->PvB(this->chessBoard, this->player1, this->bot, this->referee);
+                    this->reset();
                     break;
                 case 3:
                     bot->setDepth(2);
                     controller->PvB(this->chessBoard, this->player1, this->bot, this->referee);
-                    break;
-                case 4:
-                    system("clear");
+                    this->reset();
                     break;
                 }
-            } while (selection);
+            } while (selection != 4);
             this->reset();
             system("pause");
             system("clear");
@@ -147,8 +147,6 @@ void CaroApp::start() {
             controller->guild();
             system("pause");
             system("clear");
-            break;
-        case 0:
             break;
         }
     } while (selection);

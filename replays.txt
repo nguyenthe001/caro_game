@@ -2,4 +2,4 @@ TheN2;ChinhTN;TheN2;
 KhaiNV;TheN2;KhaiNV;
 TheN2;ChinhTN;ChinhTN;
 The;Tung;The;
-TheN2;KhaiNv;
+TheN2;KhaiNv;TheN2;ChinhTn;
