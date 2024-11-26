@@ -1,2 +1,3 @@
 #!/bin/bash
-./main
+cd build
+./caro_game

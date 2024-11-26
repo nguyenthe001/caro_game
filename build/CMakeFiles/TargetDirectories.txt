@@ -1,0 +1,3 @@
+/home/then2/Documents/DATN/Source-TheN2/caro_game/build/CMakeFiles/caro_game.dir
+/home/then2/Documents/DATN/Source-TheN2/caro_game/build/CMakeFiles/edit_cache.dir
+/home/then2/Documents/DATN/Source-TheN2/caro_game/build/CMakeFiles/rebuild_cache.dir

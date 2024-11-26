@@ -1,13 +1,18 @@
 #!/bin/bash
 
-nameFile="main"
-pathFile="./main"
+targetFolder="build"
 
-if [ -e $pathFile ]; then
-    rm $nameFile
-    echo "Building..."
-else
-    echo "Building..."
+if [ ! -d "$targetFolder" ]; then
+    echo "-- Creating build directory..."
+    mkdir "$targetFolder"
 fi
 
-make
+cd "$targetFolder"
+
+echo "-- Running cmake to configure the project..."
+cmake ..
+
+echo "-- Building the project..."
+cmake --build .
+
+cd ..
