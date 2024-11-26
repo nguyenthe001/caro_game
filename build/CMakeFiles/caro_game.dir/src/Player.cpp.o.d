@@ -2,7 +2,7 @@ CMakeFiles/caro_game.dir/src/Player.cpp.o: \
  /home/then2/Documents/DATN/Source-TheN2/caro_game/src/Player.cpp \
  /usr/include/stdc-predef.h \
  /home/then2/Documents/DATN/Source-TheN2/caro_game/include/Player.h \
- /usr/include/c++/13/limits \
+ /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -13,7 +13,6 @@ CMakeFiles/caro_game.dir/src/Player.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
- /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/c++/13/bits/stringfwd.h \
  /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/c++/13/bits/char_traits.h \
@@ -111,7 +110,7 @@ CMakeFiles/caro_game.dir/src/Player.cpp.o: \
  /usr/include/c++/13/bits/charconv.h \
  /usr/include/c++/13/bits/functional_hash.h \
  /usr/include/c++/13/bits/hash_bytes.h \
- /usr/include/c++/13/bits/basic_string.tcc \
+ /usr/include/c++/13/bits/basic_string.tcc /usr/include/c++/13/limits \
  /home/then2/Documents/DATN/Source-TheN2/caro_game/include/ChessBoard.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
  /usr/include/c++/13/ios /usr/include/c++/13/exception \

@@ -1,7 +1,7 @@
 #ifndef PLAYER_H
 #define PLAYER_H
-#include <limits>
 #include <string>
+#include <limits>
 #include "ChessBoard.h"
 class Player
 {

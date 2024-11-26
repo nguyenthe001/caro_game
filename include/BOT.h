@@ -1,8 +1,9 @@
 #ifndef BOT_H
 #define BOT_H
-#include <algorithm>
 #include "ChessBoard.h"
 #include "Referee.h"
+#include <algorithm>
+#include <climits>
 class BOT
 {
 private:

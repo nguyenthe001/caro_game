@@ -1,7 +1,5 @@
 #ifndef CARO_APP_H
 #define CARO_APP_H
-#include <iostream>
-#include <limits>
 #include "Player.h"
 #include "BOT.h"
 #include "ChessBoard.h"

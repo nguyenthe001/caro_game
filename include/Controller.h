@@ -1,10 +1,9 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 #include <vector>
-#include <iostream>
-#include <algorithm>
 #include <iomanip>
 #include <fstream>
+#include <map>
 #include "BOT.h"
 #include "ChessBoard.h"
 #include "Player.h"
